@@ -1,6 +1,6 @@
 # JavaScript Fundamentals
 
-## 1. What is JavaScript, and where does it run?
+## 1. What is JavaScript, and where can it run?
 
 JavaScript is a high-level, interpreted (or JIT-compiled), dynamically-typed programming language. It was originally created to make web pages interactive, but it has since grown into a general-purpose language.
 
@@ -43,7 +43,7 @@ x = "now a string"; // compile-time error
 
 ---
 
-## 3. What are primitive and reference values?
+## 3. What's the difference between primitive and reference values?
 
 - **Primitive values** are immutable and stored **by value**. When you assign or pass a primitive, a copy is made.
 - **Reference values** (objects, arrays, functions) are stored **by reference**. The variable holds a pointer to a location in memory; copying the variable copies the reference, not the underlying data.
@@ -64,7 +64,7 @@ console.log(obj1.value); // 20 (both point to the same object)
 
 ---
 
-## 4. What are the primitive data types?
+## 4. Can you name the primitive data types in JavaScript?
 
 JavaScript has 7 primitive types:
 
@@ -88,7 +88,7 @@ typeof Symbol("id");       // "symbol"
 
 ---
 
-## 5. What is the difference between let, const, and var?
+## 5. What's the difference between var, let, and const?
 
 | | `var` | `let` | `const` |
 |---|---|---|---|
@@ -116,7 +116,7 @@ arr = [5, 6];       // TypeError - can't reassign the binding
 
 ---
 
-## 6. What is hoisting?
+## 6. What is hoisting in JavaScript?
 
 Hoisting is JavaScript's behavior of moving **declarations** (not initializations) to the top of their scope during the compile phase, before the code executes.
 
@@ -144,7 +144,7 @@ function sayHi() {
 
 ---
 
-## 7. What is the Temporal Dead Zone?
+## 7. What is the Temporal Dead Zone (TDZ)?
 
 The **Temporal Dead Zone (TDZ)** is the period between the start of a block/scope and the point where a `let` or `const` variable is actually declared. Accessing the variable in this window throws a `ReferenceError`, even though the variable has technically been hoisted.
 
@@ -159,7 +159,7 @@ The **Temporal Dead Zone (TDZ)** is the period between the start of a block/scop
 
 ---
 
-## 8. What is the difference between == and ===?
+## 8. What's the difference between == and ===?
 
 - `==` (**loose equality**) compares values **after** performing type coercion if the operand types differ.
 - `===` (**strict equality**) compares both **value and type**, with no coercion.
@@ -179,7 +179,7 @@ null === undefined; // false
 
 ---
 
-## 9. What is type coercion?
+## 9. What is type coercion in JavaScript?
 
 Type coercion is the automatic (implicit) or manual (explicit) conversion of a value from one type to another.
 
@@ -198,7 +198,7 @@ Boolean(0);    // false
 
 ---
 
-## 10. What are truthy and falsy values?
+## 10. What are truthy and falsy values in JavaScript?
 
 Every value in JavaScript is inherently truthy or falsy when evaluated in a boolean context (like an `if` statement).
 
@@ -236,7 +236,7 @@ if ([]) {
 
 ---
 
-## 11. What is the difference between null and undefined?
+## 11. What's the difference between null and undefined?
 
 - **`undefined`** means a variable has been declared but not yet assigned a value. JavaScript sets this automatically.
 - **`null`** is an assignment value that represents "no value" or "empty" — it must be set intentionally by the developer.
@@ -257,7 +257,7 @@ null === undefined; // false (different types)
 
 ---
 
-## 12. What is NaN?
+## 12. What is NaN in JavaScript?
 
 `NaN` stands for **"Not a Number"**. It's a special numeric value that represents the result of an invalid or undefined mathematical operation.
 
@@ -302,7 +302,7 @@ value === null; // reliable null check
 
 ---
 
-## 14. What is the difference between typeof and instanceof?
+## 14. What's the difference between typeof and instanceof?
 
 - **`typeof`** returns a string indicating the **primitive type** of a value. It's mainly useful for primitives.
 - **`instanceof`** checks whether an object is an **instance of a specific constructor/class** by walking its prototype chain. It's used for reference types.
@@ -328,7 +328,7 @@ typeof d;             // "object" (doesn't tell you it's a Dog)
 
 ---
 
-## 15. What is strict mode?
+## 15. What is strict mode, and how do you enable it?
 
 Strict mode is an opt-in mode that makes JavaScript enforce stricter parsing and error handling. It's enabled by adding `"use strict";` at the top of a file or function.
 
@@ -361,7 +361,7 @@ Note: ES6 modules and classes are automatically in strict mode, no directive nee
 
 ---
 
-## 16. What is the difference between an expression and a statement?
+## 16. What's the difference between an expression and a statement?
 
 - An **expression** is any piece of code that **produces a value**.
 - A **statement** is an instruction that **performs an action**; it does not necessarily produce a value.
@@ -396,7 +396,7 @@ let b = (if (true) {}); // SyntaxError -> if is a statement, not an expression
 
 ---
 
-## 17. What is short-circuit evaluation?
+## 17. What is short-circuit evaluation in JavaScript?
 
 Logical operators `&&` and `||` don't always evaluate both operands — they stop ("short-circuit") as soon as the result is determined.
 
@@ -421,7 +421,7 @@ const name = inputName || "Guest";
 
 ---
 
-## 18. What is the difference between || and ??
+## 18. What's the difference between the || and ?? operators?
 
 Both provide a fallback value, but they differ in **which values trigger the fallback**.
 
@@ -446,7 +446,7 @@ x ?? "fallback"; // "fallback"
 
 ---
 
-## 19. What is optional chaining?
+## 19. What is optional chaining, and when would you use it?
 
 Optional chaining (`?.`) lets you safely access deeply nested properties/methods without manually checking if each level exists. If any part of the chain is `null` or `undefined`, the whole expression short-circuits and returns `undefined` instead of throwing an error.
 
@@ -478,7 +478,7 @@ const email = user.contact?.email ?? "no email provided";
 
 ---
 
-## 20. What is the difference between undefined, null, and an undeclared variable?
+## 20. What's the difference between undefined, null, and a variable that was never declared?
 
 | | `undefined` | `null` | Undeclared |
 |---|---|---|---|
