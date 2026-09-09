@@ -1,12 +1,12 @@
 - **LeetCode Patterns**
-  - [Array and Hashing](leetcode/array and hashing .md)
+  - [Array and Hashing](leetcode/array and hashing.md)
   - [Two Pointer](leetcode/two pointer.md)
   - [Sliding Window](leetcode/sliding window.md)
   - [Stack](leetcode/stack.md)
   - [Binary Search](leetcode/binary search.md)
   - [Linked List](leetcode/linked list.md)
   - [Tries](leetcode/tries.md)
-  - [Heap and Priority Queue](leetcode/Heap and priority queue .md)
+  - [Heap and Priority Queue](leetcode/heap and priority queue.md)
   - [Backtracking](leetcode/backtracking.md)
   - [Graph](leetcode/graph.md)
   - [Intervals](leetcode/intervals.md)
@@ -16,5 +16,5 @@
 
 - **JavaScript Mastery**
   - [Fundamentals](javascript mastery/fundamentals.md)
-  - [Variables](javascript mastery/Variables.md)
+  - [Variables](javascript mastery/variables.md)
   - [Functions](javascript mastery/function.md)

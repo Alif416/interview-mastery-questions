@@ -205,7 +205,7 @@ Time: O(n log n), Space: O(1)
 
 **Pattern:** Meeting scheduling
 
-**Problem:** Given meeting time intervals, find the minimum number of conference rooms required. *(Also covered in [Heap and priority queue . md](Heap%20and%20priority%20queue%20%20.md), with the heap mechanics explained in more depth.)*
+**Problem:** Given meeting time intervals, find the minimum number of conference rooms required. *(Also covered in [Heap & Priority Queue](heap%20and%20priority%20queue.md), with the heap mechanics explained in more depth.)*
 
 **Approach:** Sort by start time. Use a min-heap of end times representing rooms currently in use — if the room that frees up **soonest** (`heap[0]`) is already free by the current meeting's start, reuse it; otherwise a new room is needed.
 

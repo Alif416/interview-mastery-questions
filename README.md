@@ -12,14 +12,14 @@ Each note covers a pattern's core idea, the shapes it recognizes, and a curated 
 
 | Pattern | Notes |
 |---|---|
-| [Array & Hashing](leetcode/array and hashing .md) | HashMap/HashSet, frequency counting, prefix sums |
+| [Array & Hashing](leetcode/array and hashing.md) | HashMap/HashSet, frequency counting, prefix sums |
 | [Two Pointers](leetcode/two pointer.md) | Sorted-array and opposite-end techniques |
 | [Sliding Window](leetcode/sliding window.md) | Fixed and variable-size windows |
 | [Stack](leetcode/stack.md) | Monotonic stacks, matching/parsing problems |
 | [Binary Search](leetcode/binary search.md) | Search space reduction beyond sorted arrays |
 | [Linked List](leetcode/linked list.md) | Fast/slow pointers, reversal, cycle detection |
 | [Tries](leetcode/tries.md) | Prefix trees for word/string problems |
-| [Heap & Priority Queue](leetcode/Heap and priority queue .md) | Top-K, merging, scheduling problems |
+| [Heap & Priority Queue](leetcode/heap and priority queue.md) | Top-K, merging, scheduling problems |
 | [Backtracking](leetcode/backtracking.md) | Combinations, permutations, constraint search |
 | [Graph](leetcode/graph.md) | DFS/BFS, topological sort, union-find |
 | [Intervals](leetcode/intervals.md) | Merging, scheduling, overlap problems |
@@ -34,7 +34,7 @@ Core language fundamentals, interview-question style.
 | Topic | Notes |
 |---|---|
 | [Fundamentals](javascript mastery/fundamentals.md) | Language basics, coercion, scoping, equality |
-| [Variables](javascript mastery/Variables.md) | `var`/`let`/`const`, hoisting, TDZ |
+| [Variables](javascript mastery/variables.md) | `var`/`let`/`const`, hoisting, TDZ |
 | [Functions](javascript mastery/function.md) | Closures, `this`, higher-order functions |
 
 ## Site

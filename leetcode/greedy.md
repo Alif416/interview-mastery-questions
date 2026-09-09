@@ -302,7 +302,7 @@ Time: O(n log n), Space: O(1)
 
 **Pattern:** Sorting + greedy (closed-form counting, as an alternative to the heap-based simulation)
 
-**Problem:** Given CPU tasks and a cooldown `n` between repeats of the same task type, find the minimum total time (including idle slots) to complete them all. *(Also solved with a max-heap simulation in [Heap and priority queue . md](Heap%20and%20priority%20queue%20%20.md) — this is the greedy formula version of the same problem.)*
+**Problem:** Given CPU tasks and a cooldown `n` between repeats of the same task type, find the minimum total time (including idle slots) to complete them all. *(Also solved with a max-heap simulation in [Heap & Priority Queue](heap%20and%20priority%20queue.md) — this is the greedy formula version of the same problem.)*
 
 **Approach:** The **most frequent** task type dictates the "skeleton" of the schedule: it needs `max_count - 1` full cooldown gaps of size `n + 1` after it, plus one slot for each task type that's tied for that max frequency. If there are enough *other*, less-frequent tasks to fully pack every idle gap in that skeleton, the answer is simply `len(tasks)`; otherwise it's the skeleton length itself — so the greedy answer is the larger of the two.
 

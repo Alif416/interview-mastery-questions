@@ -1,14 +1,14 @@
 - [Overview](README.md)
 
 - **Patterns**
-  - [Array and Hashing](array and hashing .md)
+  - [Array and Hashing](array and hashing.md)
   - [Two Pointer](two pointer.md)
   - [Sliding Window](sliding window.md)
   - [Stack](stack.md)
   - [Binary Search](binary search.md)
   - [Linked List](linked list.md)
   - [Tries](tries.md)
-  - [Heap and Priority Queue](Heap and priority queue .md)
+  - [Heap and Priority Queue](heap and priority queue.md)
   - [Backtracking](backtracking.md)
   - [Graph](graph.md)
   - [Intervals](intervals.md)

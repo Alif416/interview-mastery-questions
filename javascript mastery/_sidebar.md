@@ -2,5 +2,5 @@
 
 - **Topics**
   - [Fundamentals](fundamentals.md)
-  - [Variables](Variables.md)
+  - [Variables](variables.md)
   - [Functions](function.md)

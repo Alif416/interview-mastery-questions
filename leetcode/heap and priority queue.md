@@ -299,7 +299,7 @@ Time: O(N log k) where N = total nodes across all lists, Space: O(k)
 
 **Problem:** Given an array, return the `k` most frequent elements.
 
-**Approach:** Count frequencies, then keep a min-heap of size `k` keyed by frequency — whenever it exceeds size `k`, pop the least frequent element. (This is the general-purpose heap approach; bucket sort — see [array and hashing .md](array%20and%20hashing%20.md) — achieves O(n) instead when frequencies are bounded by array length.)
+**Approach:** Count frequencies, then keep a min-heap of size `k` keyed by frequency — whenever it exceeds size `k`, pop the least frequent element. (This is the general-purpose heap approach; bucket sort — see [array and hashing.md](array%20and%20hashing.md) — achieves O(n) instead when frequencies are bounded by array length.)
 
 ```python
 import heapq
