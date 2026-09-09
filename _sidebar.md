@@ -1,5 +1,3 @@
-- [Home](/)
-
 - **LeetCode Patterns**
   - [Array and Hashing](leetcode/array and hashing .md)
   - [Two Pointer](leetcode/two pointer.md)
