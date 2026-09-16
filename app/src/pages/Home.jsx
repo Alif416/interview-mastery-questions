@@ -15,29 +15,22 @@ export default function Home() {
       </p>
 
       <div className="home-sections">
-        {sections.map((section) => (
-          <div className="home-section-card" key={section.slug}>
-            <div className="home-section-card-header">
+        {sections.map((section) => {
+          const firstPage = section.pages[0];
+          return (
+            <Link className="home-section-card" key={section.slug} to={`/${section.slug}/${firstPage.slug}`}>
               <span className="home-section-icon" aria-hidden="true">
                 {section.icon}
               </span>
-              <div>
-                <div className="home-section-card-title-row">
-                  <h2>{section.title}</h2>
-                  <span className="home-section-count">{section.pages.length}</span>
-                </div>
-                <p>{section.description}</p>
+              <div className="home-section-card-title-row">
+                <h2>{section.title}</h2>
+                <span className="home-section-count">{section.pages.length} topics</span>
               </div>
-            </div>
-            <ul className="home-section-list">
-              {section.pages.map((page) => (
-                <li key={page.slug}>
-                  <Link to={`/${section.slug}/${page.slug}`}>{page.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+              <p>{section.description}</p>
+              <span className="home-section-cta">Browse →</span>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );
