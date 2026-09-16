@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-
-const GITHUB_URL = 'https://github.com/Alif416/interview-mastery-questions';
+import { sections } from '../content/manifest.js';
 
 export default function Home() {
   return (
@@ -15,31 +14,30 @@ export default function Home() {
         focused review, not endless scrolling.
       </p>
 
-      <div className="home-actions">
-        <Link className="primary" to="/leetcode/array-hashing">
-          Get Started
-        </Link>
-        <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
-          View on GitHub
-        </a>
-      </div>
-
-      <div className="home-features">
-        <div className="home-feature">
-          <div className="icon">🧩</div>
-          <h3>14 Patterns</h3>
-          <p>Recurring problem-solving patterns that cover the majority of technical interview questions.</p>
-        </div>
-        <div className="home-feature">
-          <div className="icon">⚡</div>
-          <h3>Focused Review</h3>
-          <p>Each note distills the core idea and the signals that point to it — not just solutions to memorize.</p>
-        </div>
-        <div className="home-feature">
-          <div className="icon">💻</div>
-          <h3>JS Fundamentals</h3>
-          <p>Core language concepts explained in interview-question form, from hoisting to closures.</p>
-        </div>
+      <div className="home-sections">
+        {sections.map((section) => (
+          <div className="home-section-card" key={section.slug}>
+            <div className="home-section-card-header">
+              <span className="home-section-icon" aria-hidden="true">
+                {section.icon}
+              </span>
+              <div>
+                <div className="home-section-card-title-row">
+                  <h2>{section.title}</h2>
+                  <span className="home-section-count">{section.pages.length}</span>
+                </div>
+                <p>{section.description}</p>
+              </div>
+            </div>
+            <ul className="home-section-list">
+              {section.pages.map((page) => (
+                <li key={page.slug}>
+                  <Link to={`/${section.slug}/${page.slug}`}>{page.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   );

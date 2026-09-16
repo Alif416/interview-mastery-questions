@@ -8,6 +8,8 @@ export const sections = [
   {
     slug: 'leetcode',
     title: 'LeetCode Patterns',
+    icon: '🧩',
+    description: 'Recurring problem-solving patterns that cover most technical interview questions.',
     sourceDir: 'leetcode',
     pages: [
       { slug: 'array-hashing', title: 'Array & Hashing', file: 'array.md' },
@@ -29,11 +31,20 @@ export const sections = [
   {
     slug: 'javascript-mastery',
     title: 'JavaScript Mastery',
+    icon: '💻',
+    description: 'Core language concepts explained in interview-question form, from hoisting to Proxies.',
     sourceDir: 'javascript mastery',
     pages: [
       { slug: 'fundamentals', title: 'Fundamentals', file: 'fundamentals.md' },
       { slug: 'variables', title: 'Variables', file: 'variables.md' },
       { slug: 'functions', title: 'Functions', file: 'function.md' },
+      { slug: 'objects', title: 'Objects & Prototypes', file: 'objects.md' },
+      { slug: 'arrays', title: 'Arrays & Data Transformation', file: 'arrays.md' },
+      { slug: 'async', title: 'Asynchronous JavaScript', file: 'async.md' },
+      { slug: 'dom', title: 'DOM & Browser APIs', file: 'dom.md' },
+      { slug: 'modules', title: 'Modules & Modern JS', file: 'modules.md' },
+      { slug: 'memory', title: 'Memory & Performance', file: 'memory.md' },
+      { slug: 'advanced', title: 'Advanced JavaScript', file: 'advanced.md' },
     ],
   },
 ];

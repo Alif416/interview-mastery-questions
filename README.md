@@ -36,6 +36,13 @@ Core language fundamentals, interview-question style.
 | [Fundamentals](javascript mastery/fundamentals.md) | Language basics, coercion, scoping, equality |
 | [Variables](javascript mastery/variables.md) | `var`/`let`/`const`, hoisting, TDZ |
 | [Functions](javascript mastery/function.md) | Closures, `this`, higher-order functions |
+| [Objects & Prototypes](javascript mastery/objects.md) | Shallow/deep copy, prototype chain, classes |
+| [Arrays & Data Transformation](javascript mastery/arrays.md) | map/filter/reduce, sorting, grouping, immutability |
+| [Asynchronous JavaScript](javascript mastery/async.md) | Event loop, Promises, async/await, cancellation |
+| [DOM & Browser APIs](javascript mastery/dom.md) | Events, storage, Fetch/CORS, debounce/throttle |
+| [Modules & Modern JS](javascript mastery/modules.md) | ESM/CommonJS, generators, Map/Set, symbols |
+| [Memory & Performance](javascript mastery/memory.md) | GC, memory leaks, memoization, optimization |
+| [Advanced JavaScript](javascript mastery/advanced.md) | `this`, closures, currying, Proxy/Reflect |
 
 ## Site
 
