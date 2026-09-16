@@ -6,7 +6,7 @@ export default function Navbar({ onOpenSearch, theme, onToggleTheme }) {
   return (
     <header className="navbar">
       <NavLink to="/" className="navbar-brand" end>
-        Interview Mastery
+        Interview Drill
       </NavLink>
 
       <nav className="navbar-links">

@@ -1,4 +1,4 @@
-# Interview Mastery — app
+# Interview Drill — app
 
 Vite + React app that renders the notes in `../leetcode/` and `../javascript mastery/`
 at runtime, with a navbar / body layout, sidebar navigation, and search. Uses real URLs

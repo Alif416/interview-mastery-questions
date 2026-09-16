@@ -3,7 +3,7 @@ const BADGE_URL = 'https://visitor-badge.laobi.icu/badge?page_id=alif416.intervi
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <span>Interview Mastery</span>
+      <span>Interview Drill</span>
       <img src={BADGE_URL} alt="Visitor count" className="visitor-badge" />
     </footer>
   );

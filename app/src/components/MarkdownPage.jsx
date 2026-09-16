@@ -62,7 +62,7 @@ export default function MarkdownPage() {
   }, [sectionSlug, pageSlug]);
 
   useDocumentHead({
-    title: match ? `${match.page.title} — Interview Mastery` : undefined,
+    title: match ? `${match.page.title} — Interview Drill` : undefined,
     description: state.status === 'ready' ? deriveDescription(state.text) : undefined,
   });
 

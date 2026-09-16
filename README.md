@@ -1,4 +1,4 @@
-# Interview Mastery
+# Interview Drill
 
 Structured notes for coding interview prep, organized for focused review rather than endless scrolling.
 

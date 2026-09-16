@@ -4,7 +4,7 @@ import { useDocumentHead } from '../hooks/useDocumentHead.js';
 
 export default function Home() {
   useDocumentHead({
-    title: 'Interview Mastery — Coding Interview Notes',
+    title: 'Interview Drill — Coding Interview Notes',
     description:
       'Structured coding interview prep notes: LeetCode problem patterns and JavaScript fundamentals, organized for focused review.',
   });
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="home">
       <h1>
-        Interview Mastery
+        Interview Drill
         <span className="home-subtitle">Coding interview notes, organized</span>
       </h1>
 
