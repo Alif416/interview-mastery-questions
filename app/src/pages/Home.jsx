@@ -5,8 +5,7 @@ import { useDocumentHead } from '../hooks/useDocumentHead.js';
 export default function Home() {
   useDocumentHead({
     title: 'Interview Drill — Coding Interview Notes',
-    description:
-      'Structured coding interview prep notes: LeetCode problem patterns and JavaScript fundamentals, organized for focused review.',
+    description: 'A structured library of interview prep notes — built for focused review, not endless scrolling.',
   });
 
   return (
@@ -17,8 +16,8 @@ export default function Home() {
       </h1>
 
       <p className="home-tagline">
-        A structured path through LeetCode patterns and JavaScript fundamentals — built for
-        focused review, not endless scrolling.
+        A structured library of interview prep notes — built for focused review, not endless
+        scrolling.
       </p>
 
       <div className="home-sections">
