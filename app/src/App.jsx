@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import MarkdownPage from './components/MarkdownPage.jsx';
 import SearchModal from './components/SearchModal.jsx';
+import Footer from './components/Footer.jsx';
 import Home from './pages/Home.jsx';
 import { useTheme } from './hooks/useTheme.js';
 
@@ -36,6 +37,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/:sectionSlug/:pageSlug" element={<MarkdownPage />} />
           </Routes>
+          <Footer />
         </main>
       </div>
       <SearchModal open={searchOpen} onClose={closeSearch} />

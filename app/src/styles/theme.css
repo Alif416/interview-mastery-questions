@@ -286,6 +286,33 @@ a {
   flex: 1;
   min-width: 0;
   background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+.content > .home,
+.content > .markdown-page,
+.content > .page-loading,
+.content > .page-error {
+  flex: 1;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 12.5px;
+}
+
+.site-footer .visitor-badge {
+  height: 20px;
+  border-radius: 3px;
+  opacity: 0.9;
 }
 
 /* ---------------------------------------------------------------
