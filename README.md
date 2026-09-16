@@ -1,6 +1,8 @@
 # Interview Mastery
 
-Structured notes for coding interview prep — LeetCode problem patterns and JavaScript fundamentals.
+[![Deploy](https://github.com/Alif416/interview-mastery-questions/actions/workflows/deploy.yml/badge.svg)](https://github.com/Alif416/interview-mastery-questions/actions/workflows/deploy.yml)
+
+Structured notes for coding interview prep — LeetCode problem patterns and JavaScript fundamentals, organized for focused review rather than endless scrolling.
 
 **[Browse the site →](https://alif416.github.io/interview-mastery-questions/)**
 
@@ -10,6 +12,6 @@ Structured notes for coding interview prep — LeetCode problem patterns and Jav
 
 **JavaScript Mastery** — [Fundamentals](javascript mastery/fundamentals.md), [Variables](javascript mastery/variables.md), [Functions](javascript mastery/function.md), [Objects & Prototypes](javascript mastery/objects.md), [Arrays & Data Transformation](javascript mastery/arrays.md), [Asynchronous JavaScript](javascript mastery/async.md), [DOM & Browser APIs](javascript mastery/dom.md), [Modules & Modern JS](javascript mastery/modules.md), [Memory & Performance](javascript mastery/memory.md), [Advanced JavaScript](javascript mastery/advanced.md)
 
-## Want a topic covered?
+## Contributing
 
-[Open an issue](https://github.com/Alif416/interview-mastery-questions/issues/new) and I'll add it.
+Notice a topic missing? [Open an issue](https://github.com/Alif416/interview-mastery-questions/issues/new) and it'll get added.
