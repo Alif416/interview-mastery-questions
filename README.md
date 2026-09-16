@@ -44,6 +44,10 @@ Core language fundamentals, interview-question style.
 | [Memory & Performance](javascript mastery/memory.md) | GC, memory leaks, memoization, optimization |
 | [Advanced JavaScript](javascript mastery/advanced.md) | `this`, closures, currying, Proxy/Reflect |
 
+## Want a topic covered?
+
+If there's a pattern or JS topic you'd like to see notes on, [open an issue](https://github.com/Alif416/interview-mastery-questions/issues/new) describing what you're looking for and I'll add it.
+
 ## Site
 
 The notes are published as a React app (Vite) in [`app/`](app), rendered client-side with a
