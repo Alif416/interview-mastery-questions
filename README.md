@@ -12,7 +12,7 @@ Each note covers a pattern's core idea, the shapes it recognizes, and a curated 
 
 | Pattern | Notes |
 |---|---|
-| [Array & Hashing](leetcode/array and hashing.md) | HashMap/HashSet, frequency counting, prefix sums |
+| [Array & Hashing](leetcode/array.md) | HashMap/HashSet, frequency counting, prefix sums |
 | [Two Pointers](leetcode/two pointer.md) | Sorted-array and opposite-end techniques |
 | [Sliding Window](leetcode/sliding window.md) | Fixed and variable-size windows |
 | [Stack](leetcode/stack.md) | Monotonic stacks, matching/parsing problems |
@@ -39,4 +39,8 @@ Core language fundamentals, interview-question style.
 
 ## Site
 
-The notes are published as a browsable site via [Docsify](https://docsify.js.org) — no build step, just plain markdown rendered client-side with search and navigation. To add a new note, drop the `.md` file in the right folder and add a link to [`_sidebar.md`](_sidebar.md).
+The notes are published as a React app (Vite) in [`app/`](app), rendered client-side with a
+sidebar and search — see [`app/README.md`](app/README.md) to run it locally. Deployment to
+GitHub Pages runs via the [`deploy` workflow](.github/workflows/deploy.yml) on every push to
+`main`. To add a new note, drop the `.md` file in the right folder and add an entry to
+[`app/src/content/manifest.js`](app/src/content/manifest.js).

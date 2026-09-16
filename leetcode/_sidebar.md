@@ -1,7 +1,8 @@
 - [Overview](README.md)
 
 - **Patterns**
-  - [Array and Hashing](array and hashing.md)
+  - (array.md)
+
   - [Two Pointer](two pointer.md)
   - [Sliding Window](sliding window.md)
   - [Stack](stack.md)

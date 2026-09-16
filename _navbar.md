@@ -1,2 +1,0 @@
-- [JavaScript](javascript mastery/README.md)
-- [LeetCode](leetcode/README.md)
