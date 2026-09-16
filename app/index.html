@@ -12,6 +12,29 @@
         } catch (e) {}
       })();
     </script>
+    <script>
+      // Counterpart to public/404.html's spa-github-pages redirect: restore the
+      // real path (and query/hash) from the ?p=... encoding before React Router mounts.
+      (function () {
+        var l = window.location;
+        if (l.search[1] === 'p' && l.search[2] === '=') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            });
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) +
+              decoded[0].slice(2) +
+              (decoded[1] ? '?' + decoded[1].slice(2) : '') +
+              l.hash
+          );
+        }
+      })();
+    </script>
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e293b'/%3E%3Ctext x='32' y='43' font-family='Arial,Helvetica,sans-serif' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EIM%3C/text%3E%3C/svg%3E"
@@ -21,6 +44,28 @@
       name="description"
       content="Structured coding interview notes: LeetCode patterns and JavaScript fundamentals"
     />
+    <link rel="canonical" href="https://alif416.github.io/interview-mastery-questions/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Interview Mastery" />
+    <meta property="og:title" content="Interview Mastery — Coding Interview Notes" />
+    <meta
+      property="og:description"
+      content="Structured coding interview prep notes: LeetCode problem patterns and JavaScript fundamentals, organized for focused review."
+    />
+    <meta property="og:url" content="https://alif416.github.io/interview-mastery-questions/" />
+    <meta property="og:image" content="https://alif416.github.io/interview-mastery-questions/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Interview Mastery — Coding Interview Notes" />
+    <meta
+      name="twitter:description"
+      content="Structured coding interview prep notes: LeetCode problem patterns and JavaScript fundamentals, organized for focused review."
+    />
+    <meta name="twitter:image" content="https://alif416.github.io/interview-mastery-questions/og-image.png" />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"

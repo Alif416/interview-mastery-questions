@@ -1,7 +1,14 @@
 import { Link } from 'react-router-dom';
 import { sections } from '../content/manifest.js';
+import { useDocumentHead } from '../hooks/useDocumentHead.js';
 
 export default function Home() {
+  useDocumentHead({
+    title: 'Interview Mastery — Coding Interview Notes',
+    description:
+      'Structured coding interview prep notes: LeetCode problem patterns and JavaScript fundamentals, organized for focused review.',
+  });
+
   return (
     <div className="home">
       <h1>

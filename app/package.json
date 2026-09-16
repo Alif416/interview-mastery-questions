@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "sync-content": "node scripts/sync-content.mjs",
-    "predev": "npm run sync-content",
+    "generate-sitemap": "node scripts/generate-sitemap.mjs",
+    "predev": "npm run sync-content && npm run generate-sitemap",
     "dev": "vite",
-    "prebuild": "npm run sync-content",
+    "prebuild": "npm run sync-content && npm run generate-sitemap",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"

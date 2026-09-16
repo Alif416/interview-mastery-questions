@@ -4,9 +4,32 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import { findPage } from '../content/manifest.js';
+import { useDocumentHead } from '../hooks/useDocumentHead.js';
 
 export function contentUrl(sectionSlug, pageSlug) {
   return `${import.meta.env.BASE_URL}content/${sectionSlug}/${pageSlug}.md`;
+}
+
+// Derives a meta description from a page's markdown: skip the leading "# Title"
+// heading and any intro blockquote, strip markdown syntax from the next
+// paragraph, and truncate to a search-result-friendly length.
+export function deriveDescription(markdown) {
+  const paragraph = markdown
+    .split('\n')
+    .find((line) => {
+      const trimmed = line.trim();
+      return trimmed && !trimmed.startsWith('#') && !trimmed.startsWith('>');
+    });
+  if (!paragraph) return '';
+
+  const plain = paragraph
+    .replace(/`([^`]*)`/g, '$1')
+    .replace(/\*\*([^*]*)\*\*/g, '$1')
+    .replace(/\*([^*]*)\*/g, '$1')
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .trim();
+
+  return plain.length > 155 ? `${plain.slice(0, 154).trimEnd()}…` : plain;
 }
 
 export default function MarkdownPage() {
@@ -37,6 +60,11 @@ export default function MarkdownPage() {
     // `match` is deterministically derived from sectionSlug/pageSlug and is a
     // freshly-allocated object each render — depending on it would refetch forever.
   }, [sectionSlug, pageSlug]);
+
+  useDocumentHead({
+    title: match ? `${match.page.title} — Interview Mastery` : undefined,
+    description: state.status === 'ready' ? deriveDescription(state.text) : undefined,
+  });
 
   if (!match) {
     return (

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alif416.github.io/interview-mastery-questions/sitemap.xml
