@@ -98,14 +98,51 @@ a {
   gap: 24px;
 }
 
+.navbar-start {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-self: start;
+  min-width: 0;
+}
+
 .navbar-brand {
+  min-width: 0;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--navbar-fg);
   text-decoration: none;
   white-space: nowrap;
-  justify-self: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navbar-menu-btn {
+  display: none;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  color: var(--navbar-fg-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar-menu-btn:hover {
+  background-color: var(--navbar-hover-bg);
+  color: var(--navbar-fg);
+}
+
+.navbar-menu-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
 }
 
 .navbar-links {
@@ -209,8 +246,34 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    grid-template-columns: minmax(0, auto) 1fr auto;
+  }
+
   .navbar-links {
     display: none;
+  }
+
+  .navbar-menu-btn {
+    display: flex;
+  }
+
+  .navbar-search-btn span,
+  .navbar-search-btn kbd {
+    display: none;
+  }
+
+  .navbar-search-btn {
+    padding: 0;
+    width: 32px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    padding: 0 12px;
+    gap: 8px;
   }
 }
 
@@ -282,6 +345,35 @@ a {
   }
 }
 
+/* ---------------------------------------------------------------
+   Mobile nav drawer
+   ------------------------------------------------------------- */
+.mobile-nav-overlay {
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+}
+
+.mobile-nav-panel {
+  width: 82%;
+  max-width: 300px;
+  height: 100%;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  padding: 20px 14px 40px;
+  overflow-y: auto;
+}
+
+@media screen and (min-width: 769px) {
+  .mobile-nav-overlay {
+    display: none;
+  }
+}
+
 .content {
   flex: 1;
   min-width: 0;
@@ -319,6 +411,7 @@ a {
    Markdown page
    ------------------------------------------------------------- */
 .markdown-page {
+  width: 100%;
   max-width: 780px;
   padding: 48px 32px 80px;
   margin: 0 auto;
@@ -412,11 +505,12 @@ a {
 }
 
 .markdown-page table {
+  display: block;
+  overflow-x: auto;
   border-collapse: collapse;
   width: 100%;
   border: 1px solid var(--border);
   border-radius: 10px;
-  overflow: hidden;
   margin: 1.5rem 0;
 }
 
@@ -458,6 +552,7 @@ a {
    Home / hero
    ------------------------------------------------------------- */
 .home {
+  width: 100%;
   max-width: 960px;
   margin: 0 auto;
   padding: 96px 24px 64px;

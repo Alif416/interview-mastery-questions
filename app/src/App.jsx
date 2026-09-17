@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Sidebar from './components/Sidebar.jsx';
+import MobileNav from './components/MobileNav.jsx';
 import MarkdownPage from './components/MarkdownPage.jsx';
 import SearchModal from './components/SearchModal.jsx';
 import Footer from './components/Footer.jsx';
@@ -13,6 +14,15 @@ export default function App() {
   const openSearch = useCallback(() => setSearchOpen(true), []);
   const closeSearch = useCallback(() => setSearchOpen(false), []);
   const { theme, toggleTheme } = useTheme();
+
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const toggleMobileNav = useCallback(() => setMobileNavOpen((v) => !v), []);
+  const closeMobileNav = useCallback(() => setMobileNavOpen(false), []);
+
+  const { pathname } = useLocation();
+  useEffect(() => {
+    setMobileNavOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     function handleKeyDown(e) {
@@ -29,7 +39,13 @@ export default function App() {
 
   return (
     <>
-      <Navbar onOpenSearch={openSearch} theme={theme} onToggleTheme={toggleTheme} />
+      <Navbar
+        onOpenSearch={openSearch}
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        mobileNavOpen={mobileNavOpen}
+        onToggleMobileNav={toggleMobileNav}
+      />
       <div className="layout">
         <Sidebar />
         <main className="content">
@@ -40,6 +56,7 @@ export default function App() {
           <Footer />
         </main>
       </div>
+      <MobileNav open={mobileNavOpen} onClose={closeMobileNav} />
       <SearchModal open={searchOpen} onClose={closeSearch} />
     </>
   );

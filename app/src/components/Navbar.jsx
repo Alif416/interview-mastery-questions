@@ -2,12 +2,35 @@ import { NavLink } from 'react-router-dom';
 
 const GITHUB_URL = 'https://github.com/Alif416/interview-mastery-questions';
 
-export default function Navbar({ onOpenSearch, theme, onToggleTheme }) {
+export default function Navbar({ onOpenSearch, theme, onToggleTheme, onToggleMobileNav, mobileNavOpen }) {
   return (
     <header className="navbar">
-      <NavLink to="/" className="navbar-brand" end>
-        Interview Drill
-      </NavLink>
+      <div className="navbar-start">
+        <button
+          type="button"
+          className="navbar-menu-btn"
+          onClick={onToggleMobileNav}
+          aria-label={mobileNavOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={mobileNavOpen}
+        >
+          {mobileNavOpen ? (
+            <svg viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          ) : (
+            <svg viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          )}
+        </button>
+
+        <NavLink to="/" className="navbar-brand" end>
+          Interview Drill
+        </NavLink>
+      </div>
 
       <nav className="navbar-links">
         <NavLink to="/javascript-mastery/fundamentals" className={({ isActive }) => (isActive ? 'active' : undefined)}>
