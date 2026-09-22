@@ -2,6 +2,8 @@
 
 Start here.
 
+> **Prerequisites:** Comfortable with core JavaScript — variables, functions, objects, arrays, and ES6+ syntax (arrow functions, destructuring, template literals). TypeScript adds a type system on top of JavaScript, so shaky JS fundamentals will make the type errors confusing rather than helpful. If any of that feels shaky, work through [JavaScript Mastery](/javascript-mastery/fundamentals) first.
+
 ## 1. What is TypeScript?
 
 TypeScript is a superset of JavaScript that adds static types — you write ordinary JavaScript plus optional type annotations, and a compiler checks those types before your code ever runs, then strips them away to produce plain JavaScript. Every valid JavaScript program is also valid TypeScript; it's JavaScript with an extra layer of tooling on top, not a different language.
