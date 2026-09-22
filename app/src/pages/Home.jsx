@@ -26,7 +26,7 @@ export default function Home() {
           return (
             <Link className="home-section-card" key={section.slug} to={`/${section.slug}/${firstPage.slug}`}>
               <span className="home-section-icon" aria-hidden="true">
-                {section.icon}
+                {sectionLogos[section.slug]?.() ?? section.icon}
               </span>
               <div className="home-section-card-title-row">
                 <h2>{section.title}</h2>
@@ -41,3 +41,45 @@ export default function Home() {
     </div>
   );
 }
+
+function JsLogo() {
+  return (
+    <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+      <rect width="128" height="128" rx="22" fill="#F7DF1E" />
+      <text x="66" y="94" textAnchor="middle" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="58" fill="#1a1a1a">
+        JS
+      </text>
+    </svg>
+  );
+}
+
+function LeetCodeLogo() {
+  return (
+    <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+      <rect width="128" height="128" rx="22" fill="#1A1A1A" />
+      <text x="64" y="90" textAnchor="middle" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="46" fill="#FFA116">
+        {'{ }'}
+      </text>
+    </svg>
+  );
+}
+
+function ReactLogo() {
+  return (
+    <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+      <rect width="128" height="128" rx="22" fill="#20232A" />
+      <g fill="none" stroke="#61DAFB" strokeWidth="6">
+        <ellipse cx="64" cy="64" rx="44" ry="18" />
+        <ellipse cx="64" cy="64" rx="44" ry="18" transform="rotate(60 64 64)" />
+        <ellipse cx="64" cy="64" rx="44" ry="18" transform="rotate(120 64 64)" />
+      </g>
+      <circle cx="64" cy="64" r="7" fill="#61DAFB" />
+    </svg>
+  );
+}
+
+const sectionLogos = {
+  'javascript-mastery': JsLogo,
+  leetcode: LeetCodeLogo,
+  react: ReactLogo,
+};

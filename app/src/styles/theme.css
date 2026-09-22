@@ -610,6 +610,13 @@ a {
   margin-bottom: 12px;
 }
 
+.home-section-icon svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+}
+
 .home-section-card-title-row {
   display: flex;
   align-items: baseline;
