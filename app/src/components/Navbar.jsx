@@ -45,6 +45,9 @@ export default function Navbar({ onOpenSearch, theme, onToggleTheme, onToggleMob
         <NavLink to="/react/fundamentals" className={({ isActive }) => (isActive ? 'active' : undefined)}>
           React
         </NavLink>
+        <NavLink to="/typescript/fundamentals" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+          TypeScript
+        </NavLink>
       </nav>
 
       <div className="navbar-actions">

@@ -78,8 +78,20 @@ function ReactLogo() {
   );
 }
 
+function TsLogo() {
+  return (
+    <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+      <rect width="128" height="128" rx="22" fill="#3178C6" />
+      <text x="64" y="90" textAnchor="middle" fontFamily="Arial, Helvetica, sans-serif" fontWeight="700" fontSize="52" fill="#ffffff">
+        TS
+      </text>
+    </svg>
+  );
+}
+
 const sectionLogos = {
   'javascript-mastery': JsLogo,
   leetcode: LeetCodeLogo,
   react: ReactLogo,
+  typescript: TsLogo,
 };
