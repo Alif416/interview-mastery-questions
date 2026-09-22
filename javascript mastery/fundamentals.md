@@ -1,5 +1,7 @@
 # JavaScript Fundamentals
 
+> **Prerequisites:** None — this is the starting point. No prior JavaScript knowledge is assumed. If you've never programmed in any language before, basic familiarity with concepts like variables and loops will help you move a little faster, but it isn't required to start here.
+
 ## 1. What is JavaScript, and where can it run?
 
 JavaScript is a high-level, interpreted (or JIT-compiled), dynamically-typed programming language. It was originally created to make web pages interactive, but it has since grown into a general-purpose language.

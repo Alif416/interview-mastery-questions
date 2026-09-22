@@ -82,7 +82,7 @@ Reach for a dedicated library (Redux Toolkit, Zustand, etc.) once app-wide state
 
 ## 9. What is server state?
 
-Server state is data that actually lives on a server, fetched over the network — it can go stale the moment it's fetched, may be shared across users, and needs syncing/caching/refetching rather than being simply "owned" by the client. *(Covered in more depth in [Data Fetching & APIs](data-fetching.md).)*
+Server state is data that actually lives on a server, fetched over the network — it can go stale the moment it's fetched, may be shared across users, and needs syncing/caching/refetching rather than being simply "owned" by the client. *(Covered in more depth in [Data Fetching & APIs](/react/data-fetching).)*
 
 ---
 

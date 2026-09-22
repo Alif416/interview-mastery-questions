@@ -151,7 +151,7 @@ Time: O(n), Space: O(n)
 
 **Pattern:** Overlap detection
 
-**Problem:** Given a list of intervals, find the minimum number that must be removed so the rest don't overlap. *(Also covered in [greedy.md](greedy.md), which walks through why sorting by end time is the safe greedy choice.)*
+**Problem:** Given a list of intervals, find the minimum number that must be removed so the rest don't overlap. *(Also covered in [Greedy](/leetcode/greedy), which walks through why sorting by end time is the safe greedy choice.)*
 
 **Approach:** Sort by **end time**. Keep an interval only if it starts at or after the previously kept interval's end; every interval that overlaps the last kept one must be removed.
 
@@ -205,7 +205,7 @@ Time: O(n log n), Space: O(1)
 
 **Pattern:** Meeting scheduling
 
-**Problem:** Given meeting time intervals, find the minimum number of conference rooms required. *(Also covered in [Heap & Priority Queue](heap%20and%20priority%20queue.md), with the heap mechanics explained in more depth.)*
+**Problem:** Given meeting time intervals, find the minimum number of conference rooms required. *(Also covered in [Heap & Priority Queue](/leetcode/heap-priority-queue), with the heap mechanics explained in more depth.)*
 
 **Approach:** Sort by start time. Use a min-heap of end times representing rooms currently in use — if the room that frees up **soonest** (`heap[0]`) is already free by the current meeting's start, reuse it; otherwise a new room is needed.
 

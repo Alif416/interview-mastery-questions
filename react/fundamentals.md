@@ -1,5 +1,7 @@
 # React Fundamentals
 
+> **Prerequisites:** Comfortable with core JavaScript — functions, arrays, destructuring, and ES6 syntax (arrow functions, template literals, the spread operator). If any of that feels shaky, work through [JavaScript Mastery](/javascript-mastery/fundamentals) first, especially Fundamentals and Functions.
+
 ## 1. What is React?
 
 React is a JavaScript library (not a full framework) for building user interfaces, created and maintained by Meta. It lets you describe what a UI should look like for a given piece of data, and it takes care of updating the actual browser DOM to match. It's most commonly used to build single-page applications out of small, reusable components.

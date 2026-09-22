@@ -84,9 +84,27 @@ export default function MarkdownPage() {
 
   return (
     <article className="markdown-page">
-      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]} components={{ a: MarkdownLink }}>
         {state.text}
       </ReactMarkdown>
     </article>
+  );
+}
+
+// Internal links (e.g. "/react/rendering") get client-side routed with <Link>, so
+// navigation stays inside the SPA and respects the app's base path automatically.
+// Anything else (http/https, mailto, etc.) renders as a normal external link.
+function MarkdownLink({ href, children, ...props }) {
+  if (href?.startsWith('/')) {
+    return (
+      <Link to={href} {...props}>
+        {children}
+      </Link>
+    );
+  }
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+      {children}
+    </a>
   );
 }

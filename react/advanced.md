@@ -10,7 +10,7 @@ Fiber is React's internal reconciliation engine (since React 16) — a reimpleme
 
 ## 2. What is reconciliation?
 
-Reconciliation is the process of comparing the newly rendered tree against the previous one to determine the minimal set of real DOM changes needed. *(Covered at the mechanics level in [Rendering & Re-rendering](rendering.md).)* What Fiber adds is that this comparison work can now be split into small units and interleaved with other work — including pausing to let the browser handle something more urgent, like user input — rather than being one long uninterruptible block.
+Reconciliation is the process of comparing the newly rendered tree against the previous one to determine the minimal set of real DOM changes needed. *(Covered at the mechanics level in [Rendering & Re-rendering](/react/rendering).)* What Fiber adds is that this comparison work can now be split into small units and interleaved with other work — including pausing to let the browser handle something more urgent, like user input — rather than being one long uninterruptible block.
 
 ---
 

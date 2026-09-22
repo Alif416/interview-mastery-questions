@@ -210,7 +210,7 @@ Time: O(1) — bounded by 32 bit positions, Space: O(1)
 
 **Pattern:** Bit masking
 
-**Problem:** Given an array of distinct integers, return all possible subsets. *(Also solved via backtracking in [backtracking.md](backtracking.md) — this is the bitmask-enumeration alternative.)*
+**Problem:** Given an array of distinct integers, return all possible subsets. *(Also solved via backtracking in [Backtracking](/leetcode/backtracking) — this is the bitmask-enumeration alternative.)*
 
 **Approach:** Every subset of `n` elements corresponds to a unique `n`-bit number, where bit `i` being `1` means "include `nums[i]`." Iterate every value from `0` to `2^n - 1`, and for each one, check which bits are set to build that particular subset.
 
