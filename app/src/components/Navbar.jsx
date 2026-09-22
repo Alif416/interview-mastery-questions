@@ -42,6 +42,9 @@ export default function Navbar({ onOpenSearch, theme, onToggleTheme, onToggleMob
         >
           LeetCode
         </NavLink>
+        <NavLink to="/react/fundamentals" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+          React
+        </NavLink>
       </nav>
 
       <div className="navbar-actions">
